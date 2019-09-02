@@ -673,7 +673,7 @@
 		if(isset($_POST["submit"])){
 			unset($_GET["item_Id"]);
 
-			$search_url = "https://svcs.ebay.com/services/search/FindingService/v1?SECURITY-APPNAME=RuchikaN-stockapp-PRD-516de56b6-11545f8b&OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&RESPONSE-DATA-FORMAT=JSON&RESTPAYLOAD&paginationInput.entriesPerPage=20&HideDuplicateItems=true";
+			$search_url = "https://svcs.ebay.com/services/search/FindingService/v1?SECURITY-APPNAME=[YOUR_API_KEY]&OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&RESPONSE-DATA-FORMAT=JSON&RESTPAYLOAD&paginationInput.entriesPerPage=20&HideDuplicateItems=true";
 			$i=0;
 			
 			if(isset($_POST["keyword"])){
@@ -822,7 +822,7 @@
 
 		if(isset($_GET["item_Id"])){
 
-			$product_detail_url = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=RuchikaN-stockapp-PRD-516de56b6-11545f8b&siteid=0&version=967&ItemID=".$_GET['item_Id']."&IncludeSelector=Description,Details,ItemSpecifics";
+			$product_detail_url = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=[YOUR_API_KEY]&siteid=0&version=967&ItemID=".$_GET['item_Id']."&IncludeSelector=Description,Details,ItemSpecifics";
 			$similar_url = "http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getSimilarItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=RuchikaN-stockapp-PRD-516de56b6-11545f8b&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&itemId=".$_GET['item_Id']."&maxResults=8";
 
 	       	$product_detail_json = file_get_contents($product_detail_url);
@@ -837,7 +837,7 @@
 
 		}
 		if(isset($_POST[sim_itemId])){
-			$product_detail_url = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=RuchikaN-stockapp-PRD-516de56b6-11545f8b&siteid=0&version=967&ItemID=".$_GET['sim_itemId']."&IncludeSelector=Description,Details,ItemSpecifics";
+			$product_detail_url = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=[YOUR_API_KEY]&siteid=0&version=967&ItemID=".$_GET['sim_itemId']."&IncludeSelector=Description,Details,ItemSpecifics";
 			echo $product_detail_url;
 			$product_detail_json = file_get_contents($product_detail_url);
 			echo "<script> showdetail(".$product_detail_json.",".$keep_var.")</script>";
