@@ -823,7 +823,7 @@
 		if(isset($_GET["item_Id"])){
 
 			$product_detail_url = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=[YOUR_API_KEY]&siteid=0&version=967&ItemID=".$_GET['item_Id']."&IncludeSelector=Description,Details,ItemSpecifics";
-			$similar_url = "http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getSimilarItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=RuchikaN-stockapp-PRD-516de56b6-11545f8b&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&itemId=".$_GET['item_Id']."&maxResults=8";
+			$similar_url = "http://svcs.ebay.com/MerchandisingService?OPERATION-NAME=getSimilarItems&SERVICE-NAME=MerchandisingService&SERVICE-VERSION=1.1.0&CONSUMER-ID=[YOUR_API_KEY]&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&itemId=".$_GET['item_Id']."&maxResults=8";
 
 	       	$product_detail_json = file_get_contents($product_detail_url);
 
