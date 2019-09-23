@@ -8,6 +8,6 @@
 ● Getting hands-on experience in GCP App Engine, AWS or Azure
 ```
 
-### 2) Assignment Description is [HERE](https://github.com/Ruchika2696/csci-571-php-productSearch/blob/master/HW6_Description.pdf)
+
 
 
